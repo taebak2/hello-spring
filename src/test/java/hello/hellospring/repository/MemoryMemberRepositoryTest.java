@@ -33,6 +33,10 @@ class MemoryMemberRepositoryTest {
          assertThat(member).isEqualTo(result); // alt + enter ->assertion 안쓰고 바로 사용 가능
      }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ab3181 (2023-12-27)
      @Test
     public void findByName(){
          Member member1 = new Member();

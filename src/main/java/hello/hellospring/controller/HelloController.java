@@ -22,6 +22,10 @@ public class HelloController {
         return "hello-template";
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ab3181 (2023-12-27)
     @GetMapping("hello-string")
     @ResponseBody // http의 header, body부분 중 바디부에 이 데이터를 직접 넣는다.
     public String helloString(@RequestParam("name") String name) {

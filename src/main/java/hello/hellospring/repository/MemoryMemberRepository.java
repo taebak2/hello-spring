@@ -1,10 +1,17 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+<<<<<<< HEAD
 
 import java.util.*;
 
 
+=======
+import org.springframework.stereotype.Repository;
+
+import java.util.*;
+
+>>>>>>> 9ab3181 (2023-12-27)
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
