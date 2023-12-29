@@ -1,17 +1,10 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-<<<<<<< HEAD
-
 import java.util.*;
-
-
-=======
 import org.springframework.stereotype.Repository;
-
 import java.util.*;
 
->>>>>>> 9ab3181 (2023-12-27)
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
@@ -41,9 +34,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByName(String name) {
-        return store.values().stream()
-                .filter(member -> member.getName().equals(name))
-                .findAny();
+        return store.values().stream().filter(member -> member.getName().equals(name)).findAny();
     }
     // store.values()는 Map에 있는 값들을 Collection으로 반환
     // 이후 stream() 메서드를 호출하여 이 Collection을 스트림으로 변환
