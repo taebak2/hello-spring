@@ -37,6 +37,7 @@ public class MemberController {
 
         memberService.join(member);
         return "redirect:/";
+        // 홈 화면으로 넘김
     }
 
     @GetMapping("/members")
