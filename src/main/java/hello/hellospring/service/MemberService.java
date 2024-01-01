@@ -19,17 +19,17 @@ public class MemberService {
     @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
+
     }   // 의존성 주입
 
 
     //회원 가입
     public Long join(Member member) {
-        //같은 이름이 있는 중복 회원 X
 
-        validateDuplicateMember(member); // 중복 회원 검증
-
+        validateDuplicateMember(member);
         memberRepository.save(member);
         return member.getId();
+
     }
 
 
@@ -54,7 +54,9 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
+
     public Optional<Member> findOne(Long memberId) {
+
         return memberRepository.findById(memberId);
     }
 }

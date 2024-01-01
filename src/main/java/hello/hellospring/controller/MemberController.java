@@ -21,6 +21,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
 
         // MemberService -> 스프링 컨텐츠와 관련된 서비스를 스프링이 넣어줌
     }
