@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-@Aspect
+@Aspect // 시간 측정을 위한 로깅 기능
 @Component
 public class TimeTraceAop {
 
@@ -22,4 +22,7 @@ public class TimeTraceAop {
         }
     }
 }
+
+// execute : ProceedingJoinPoint를 파라미터로 받아서 메서드 실행 전과 후에 로깅을 수행
+// hello.hellospring 패키지 내의 모든 메서드의 실행 시간을 측정하여 로그로 출력하는 AOP 기능을 구현
 
